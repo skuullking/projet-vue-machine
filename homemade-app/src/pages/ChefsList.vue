@@ -17,8 +17,16 @@ const chefs = ref([]);
 
 onMounted(() => {
   chefs.value = [
-    { id: 1, name: "Chef Pierre", specialty: "Cuisine Française" },
-    { id: 2, name: "Chef Maria", specialty: "Cuisine Italienne" },
+    { id: 1, name: "Chef Pierre", specialty: "Cuisine Française", image: "/images/chef-pierre.jpg" },
+    { id: 2, name: "Chef Maria", specialty: "Cuisine Italienne", image: "/images/chef-maria.jpg" },
   ];
 });
 </script>
+
+<style scoped>
+.container {
+  max-width: 100%;
+  padding: 20px;
+  margin: auto;
+}
+</style>

@@ -6,9 +6,10 @@
       </div>
       <div v-else>
         <ul>
-          <li v-for="(dish, index) in cart.items" :key="index">
+          <li v-for="(dish, index) in cart.items" :key="index" class="cart-item">
+            <img :src="dish.image" alt="Plat" class="dish-image" />
             {{ dish.name }}
-            <button @click="removeFromCart(index)">Retirer</button>
+            <button @click="removeFromCart(index)" class="btn">Retirer</button>
           </li>
         </ul>
       </div>
@@ -31,6 +32,22 @@
     margin: auto;
     padding: 20px;
   }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .dish-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
   button {
     margin-left: 10px;
     color: red;

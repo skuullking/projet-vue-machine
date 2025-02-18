@@ -7,3 +7,33 @@
     </div>
   </template>
   
+  <script setup>
+  import { useUserStore } from '../store/userStore';
+  
+  const userStore = useUserStore();
+  </script>
+  
+  <style scoped>
+  .container {
+    max-width: 100%;
+    padding: 20px;
+    margin: auto;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .btn:hover {
+    background: #0056b3;
+  }
+  </style>
+  
